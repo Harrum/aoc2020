@@ -7,15 +7,25 @@ for a in f:
     input.append(int(a))
 f.close()
 
-for x in input:
-    for y in input:
-        if x + y == 2020:
-            print(x * y)
-            break
+answer1 = 0
+x = 0
 
-for x in input:
+while (answer1 == 0):
+    for y in input:
+        if input[x] + y == 2020:
+            answer1 = input[x] * y
+            break
+    x = x + 1
+print(answer1)
+
+answer2 = 0
+x = 0
+
+while (answer2 == 0):
     for y in input:
         for z in input:
-            if x + y + z == 2020:
-                print(x * y * z)
+            if input[x] + y + z == 2020:
+                answer2 = input[x] * y * z
                 break
+    x = x + 1
+print(answer2)
